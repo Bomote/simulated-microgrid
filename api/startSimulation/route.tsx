@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const startSimulations = async (req:any, res:any) => {
-    const startSimulation = async(path:any) => {
+    const startSimulation = async(path:string) => {
         await axios.get(`http://localhost:3000/api/${path}`);
     };
 
