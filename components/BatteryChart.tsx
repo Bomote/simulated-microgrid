@@ -22,7 +22,7 @@ const BatteryChart = () => {
     useEffect(()=>{
         const fetchData = async() => {
             //Fetch battery data from API
-            const result = await axios.get('/api/battery');
+            const result = await axios.get('/api/batteryData');
             const labels = result.data.map((entry:any) => new Date(entry.timestamp).toLocaleTimeString());
             const values = result.data.map((entry:any) => entry.value);
 
